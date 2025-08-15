@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class BothIncorrect {
+public class CorrectPassword {
 
     WebDriver driver;
 
@@ -27,13 +27,13 @@ public class BothIncorrect {
 
     @Test
 
-    public void LoginWithIncorrectPasswordAndIncorrectUsername(){
+    public void LoginWithCorrectPasswordAndWrongUsername(){
 
         WebElement userName = driver.findElement(By.xpath("//input[@placeholder='Username']"));
         userName.sendKeys("dummyAdmin");
 
         WebElement password = driver.findElement(By.xpath("//input[@placeholder='Password']"));
-        password.sendKeys("dummyAdmin123");
+        password.sendKeys("admin123");
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
     }
