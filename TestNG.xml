@@ -1,18 +1,53 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<suite name="Login Suite">
+<suite name="Login Suit">
 
-    <test name="Login Test Cases">
+    <test name="BothCorrect">
+
+        <parameter name="username" value="Admin"/>
+        <parameter name="password" value="admin123"/>
+
+        <classes>
+            <class name="Login_Test_Cases.BothCorrect"/>
+
+        </classes>
+    </test>
+
+    <test name="BothInCorrect">
+
+        <parameter name="username" value="dummyAdmin"/>
+        <parameter name="password" value="dummyPass"/>
 
         <classes>
 
-            <class name="Login_Test_Cases.BothCorrect"/>
             <class name="Login_Test_Cases.BothIncorrect"/>
-            <class name="Login_Test_Cases.CorrectPassword"/>
-            <class name="Login_Test_Cases.CorrectUserName"/>
 
         </classes>
+    </test>
 
+    <test name="CorrectPassword">
+
+        <parameter name="username" value="dummyAdmin"/>
+        <parameter name="password" value="admin123"/>
+
+        <classes>
+
+            <class name="Login_Test_Cases.CorrectPassword"/>
+
+        </classes>
+    </test>
+
+    <test name="CorrectUserName">
+
+        <parameter name="username" value="Admin"/>
+        <parameter name="password" value="dummyPass"/>
+
+        <classes>
+
+            <class name="Login_Test_Cases.CorrectUserName"/>
+        </classes>
     </test>
 
 </suite>
+
+
